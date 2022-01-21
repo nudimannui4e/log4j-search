@@ -1,0 +1,8 @@
+---
+- name: search vuln artifacts 
+  hosts: all 
+  become: yes
+  become_user: panbet
+  gather_facts: no
+  roles:
+    - log4j-search

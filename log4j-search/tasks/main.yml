@@ -1,0 +1,9 @@
+---
+- name: Shell find
+  ansible.builtin.shell:
+    cmd: $(find /home/panbet/ \( -name '*.jar' -o  -name '*.war' \) -type f | grep -P 'log4j.*\.jar')
+  register: result
+  args:
+    executable: /bin/bash
+
+- debug: var=result
