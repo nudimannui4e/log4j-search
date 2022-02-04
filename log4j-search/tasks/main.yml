@@ -2,6 +2,9 @@
 - name: Copy sh 
   copy: src=Log4Check.sh dest=/tmp mode=0777
 - name: Executable sh
+  ignore_errors: True
+    #  async: 60
+    #poll: 60
   command: bash /tmp/Log4Check.sh
   register: results
 - debug:
