@@ -23,3 +23,11 @@ cat tmp | grep 'results' | cut -d: -f 2,3 | sed -e 's/"//g' | sed 's/\\r/ /g' | 
  antifraud.war 0.45  log4j-api-2.13.3.jar log4j-to-slf4j-2.13.3.jar
  kd-standalone-publishers.jar 3.0.5  log4j-over-slf4j-1.7.25.jar
 ```
+
+Возможно позже пригодится для обработки списка:
+```
+VIM
+:%s/^\(.*\)\n\1$/\1/ 	Удалить строки, повторяющиеся дважды
+
+ну или просто uniq
+```
